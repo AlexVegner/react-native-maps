@@ -63,6 +63,25 @@ declaratively controlling features on the map.
       longitudeDelta: 0.0421,
     }}
   />
+
+  const styles = StyleSheet.create({
+    container: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      justifyContent: 'flex-end',
+      alignItems: 'center',
+    },
+    map: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+    },
+  });
 ```
 
 ### Using a MapView while controlling the region as state
@@ -152,7 +171,7 @@ render() {
 ### Using a custom Tile Overlay
 
 ```jsx
-<MapView 
+<MapView
   region={this.state.region}
   onRegionChange={this.onRegionChange}
 >
